@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="tiendamod"
+version="1.0.0"
+displayName="Tienda Mod"
+description='''
+Un item "Tienda" que abre una interfaz con categorias, puntos como moneda y compra/venta de 1, 10 o 50 unidades.
+'''
+
+[[dependencies.tiendamod]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.tiendamod]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"

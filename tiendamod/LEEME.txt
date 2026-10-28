@@ -1,0 +1,28 @@
+TIENDA MOD - Forge 1.20.1
+=========================
+COMPILAR (la forma mas facil):
+ 1. Instala JDK 17 (https://adoptium.net).
+ 2. Baja el "MDK" de Forge 1.20.1 (47.3.0) desde https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.1.html (boton "Mdk").
+ 3. Descomprimi el MDK y reemplaza su carpeta "src" por la "src" de este proyecto, y su build.gradle por el de este proyecto.
+ 4. En esa carpeta ejecuta:  gradlew build     (Windows: gradlew.bat build)
+ 5. El mod queda en build/libs/tiendamod-1.0.0.jar -> copialo a la carpeta mods.
+
+USO:
+ - Crea el item en modo creativo (pestana "Tienda") o con /give @s tiendamod:tienda
+ - Click derecho con el item para abrir la tienda.
+ - Los puntos se dan con:  /tienda puntos dar <jugador> <cantidad>   (necesita OP)
+ - Tambien se ganan VENDIENDO items en la pestana "Vender".
+
+EDITAR LA TIENDA (OP / nivel 2):
+ /tienda agregar <compra> [venta] [categoria]           agrega el item que tenes en la mano
+ /tienda precio <item> <compra> [venta] [categoria]     agrega o cambia el precio de cualquier item
+ /tienda quitar [item]                                  lo saca de la tienda
+ /tienda puntos <dar|quitar|poner|ver> <jugador> [n]
+ /tienda recargar                                       relee el archivo de precios
+ Categorias: materiales, comidas, armas, armaduras, herramientas, bloques, otros
+ Tambien podes editar a mano: config/tiendamod_precios.json (despues /tienda recargar)
+
+COMPILAR SIN INSTALAR NADA (GitHub Actions, gratis):
+ 1. Crea un repositorio nuevo en github.com y subi TODO el contenido de esta carpeta (incluida .github).
+ 2. Anda a la pestana "Actions" -> "Compilar mod" -> espera ~5 min.
+ 3. Entra a la ejecucion terminada y descarga "tiendamod-jar" (adentro esta tiendamod-1.0.0.jar).
